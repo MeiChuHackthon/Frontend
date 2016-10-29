@@ -91,7 +91,15 @@ body {
 	</div>
 
 				<!--Right Part-->
+<<<<<<< Updated upstream
 	<div class="col-md-9 jumbotron">
+=======
+<<<<<<< HEAD
+	<div class="col-lg-9 jumbotron">
+=======
+	<div class="col-md-9 jumbotron">
+>>>>>>> a17602deef2893d2d74b5af5f5ca65d69233cc1c
+>>>>>>> Stashed changes
 		<div class="bs-docs-section">
 			<div style="font-size:30px">基本資料 <a class="btn btn-sm btn-warning" style="font-size: 20px" id="edit">  Edit</a><a class="btn btn-sm btn-success" style="font-size: 20px;display: none" id="save">  Save</a></div>
 			
@@ -169,6 +177,24 @@ body {
 					 		<button id="exp_submit" onclick="addRow()" class="btn btn-md btn-info">New</button>
 					 	</div>
 				 	</div>
+
+			<div style="font-size:30px">專業技能 <button class="btn btn-md btn-primary" id="add_skill">+</button></div>
+				 	<table id="skill_table" class="table">
+				 		<tr>
+				 			<th>名稱</th>
+				 			<th>受稱讚</th>
+				 		</tr>
+				 	</table>
+				 	<div id="skill_list">
+					 	<div id='skill_form' style="display:none">
+					 		<div>
+					 		<label>名稱</label>
+					 		<input type="text" id="skill_name">
+					 		</div>
+					 		<button id="skill_submit" onclick="addRow_skill()" class="btn btn-md btn-info">New</button>
+					 	</div>
+				 	</div>
+
 			<div style="font-size:30px">工作經歷 <button class="btn btn-md btn-primary" id="add_exp_w">+</button></div>
 				 	<table id="exp_table_w" class="table">
 				 		<tr>
@@ -194,8 +220,7 @@ body {
 					 		</div>
 					 		<button id="exp_submit" onclick="addRow_w()" class="btn btn-md btn-info">New</button>
 					 	</div>
-				 	</div>
-		
+				 	</div>		
 			<div style="font-size:30px">專案經歷 <button class="btn btn-md btn-primary" id="add_exp_p">+</button></div>
 				 	<table id="exp_table_p" class="table">
 				 		<tr>
@@ -276,6 +301,9 @@ body {
 	$("#add_exp_p").click(function (){
 		$("#exp_form_p").toggle();
 	});
+	$("#add_skill").click(function (){
+		$("#skill_form").toggle();
+	});
 	function addRow(){
 		var tr = "<tr><td>"+ $('#s_name').val() + "</td><td>" + $('#d_name').val()+ "</td><td>" 
 				+ $('#g_year').val()+"</td></tr>";
@@ -300,5 +328,11 @@ body {
 		$('#s_name_p').val("");
 		$('#d_year_p').val("");
 		$('#describe').val("");
+	};
+
+	function addRow_skill(){
+		var tr = "<tr><td>"+ $('#skill_name').val() + "</td><td>0</td></tr>";
+		$("#skill_table").append(tr);
+		$('#skill_name').val("");
 	};
 </script>
