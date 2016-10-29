@@ -201,7 +201,8 @@ body {
 </div>
 
 </body>
-
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="./bootstrap.min.js"></script>
 <script>
 	$("#edit").click(function(){
 		//alert("123");
@@ -232,7 +233,19 @@ body {
 	$("#save").click(function(){
 		$(this).toggle();
 		$(this).prev().toggle();
+		save_v( $("#name_i") );
+		save_v( $("#gender_i") );
+		save_v( $("#phone_i") );
+		save_v( $("#email_i") );
+		save_v( $("#birdate_i") );
+		save_v( $("#military_i") );
+		save_v( $("#address_i") );
 	});
+	function save_v(d){
+		d.toggle();
+		d.prev().text(d.val());
+		d.prev().toggle();
+	};
 	$("#add_exp").click(function (){
 		$("#exp_form").toggle();
 	});
