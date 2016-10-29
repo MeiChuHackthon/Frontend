@@ -37,6 +37,12 @@
             -webkit-border-radius: 100px;
             border-radius: 100px;
         }
+        .item-resume {
+            display: none;
+        }
+        #form-resume {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -114,22 +120,27 @@
                     <li>
                         Resume1
                         <button class="showCont" type="button">+</button>
-                        <div id="item-resume1">
+                        <div id="item-resume1" class="item-resume">
+                            MAYAHEEE MAYAHAAAA MAYAHOOOHOOO
                         </div>
                     </li>
                     <li>
                         Resume2
                         <button class="showCont" type="button">+</button>
-                        <div id="item-resume2">
-                        
+                        <div id="item-resume2" class="item-resume">
                         </div>
                     </li>
                 </ul>
             </div>
-            <div class="well bs-component">
+            
+            <div>
+                <button id="create_bt" type="button">Create Resume</button>
+            </div>
+            
+            <div id="form-resume" class="well bs-component">
               <form class="form-horizontal">
                 <fieldset>
-                  <legend>Create Resume</legend>
+                  <legend id="legend-resume">Create Resume</legend>
                   <div class="form-group">
                     <label for="resumeName" class="col-lg-2 control-label">Custom Name</label>
                     <div class="col-lg-10">
@@ -140,27 +151,49 @@
                   <div class="form-group">
                         <label for="inputLang" class="col-lg-2 control-label">Languages</label>
                         <div class="col-lg-10">
-                            <div class="checkbox">
-                                <label>
-                                    <input id="inputLang" type="checkbox">
-                                </label>
-                            </div>
                             <ul id="lang-list">
                                 <!-- For each, append to lang-list -->
+                                <div class="col-lg-11">
+                                <li><h5>English</h5></li>
+                                <li><h5>Chinese</h5></li>
+                                </div>
+                                <div class="checkbox col-lg-1">
+                                    <label>
+                                        <input id="inputLang" type="checkbox">
+                                    </label>
+                                </div>
                             </ul>
                         </div>
+                        
                   </div>
                   
                   <div class="form-group">
-                        <label for="inputExp" class="col-lg-2 control-label">Experience</label>
+                        <label class="col-lg-2 control-label">Experience</label>
                         <div class="col-lg-10">
-                        <div class="checkbox">
-                            <label>
-                                <input id="inputExp" type="checkbox">
-                            </label>
-                        </div>
                         <ul id="exp-list">
                             <!-- For each, append to exp-list -->
+                            <li>
+                                <div class="col-lg-11">
+                                    <h5>Tutor</h5>
+                                    <p>Calculus, Physics<br>Summer 2016</p>
+                                </div>
+                                <div class="checkbox col-lg-1">
+                                    <label>
+                                    <input id="exp1" type="checkbox">
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col-lg-11">
+                                    <h5>Software Intern</h5>
+                                    <p>Summer 2017</p>
+                                </div>
+                                <div class="checkbox col-lg-1">
+                                    <label>
+                                    <input id="exp2" type="checkbox">
+                                    </label>
+                                </div>
+                            </li>
                         </ul>
                         </div>
                   </div>
@@ -168,13 +201,48 @@
                   <div class="form-group">
                         <label for="inputSkills" class="col-lg-2 control-label">Skills</label>
                         <div class="col-lg-10">
-                        <div class="checkbox">
-                            <label>
-                                <input id="inputSkills" type="checkbox">
-                            </label>
-                        </div>
                         <ul id="skills-list">
                             <!-- For each, append to skills-list -->
+                            <li>
+                                <div class="col-lg-11">
+                                    <h5>C++</h5>
+                                </div>
+                                <div class="checkbox col-lg-1">
+                                    <label>
+                                    <input id="skill1" type="checkbox">
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col-lg-11">
+                                    <h5>Java</h5>
+                                </div>
+                                <div class="checkbox col-lg-1">
+                                    <label>
+                                    <input id="skill2" type="checkbox">
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col-lg-11">
+                                    <h5>Excel</h5>
+                                </div>
+                                <div class="checkbox col-lg-1">
+                                    <label>
+                                    <input id="skill3" type="checkbox">
+                                    </label>
+                                </div>
+                            </li>
+                            <li>                             
+                                <div class="col-lg-11">
+                                    <h5>Photoshop</h5>
+                                </div>
+                                <div class="checkbox col-lg-1">
+                                    <label>
+                                    <input id="skill4" type="checkbox">
+                                    </label>
+                                </div>
+                            </li>
                         </ul>
                         </div>
                   </div>
@@ -185,8 +253,26 @@
                         <ul id="rec-list">
                             <!-- For each, append to rec-list -->
                             <li>
-                                <label for="rec1" class="control-label">David</label>
-                                <input id="rec1" type="checkbox">
+                                <div class="col-lg-11">
+                                    <h5>Perry</h5>
+                                    <p>"He's an awesome person to work with."</p>
+                                </div>
+                                <div class="checkbox col-lg-1">
+                                    <label>
+                                    <input id="rec1" type="checkbox">
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col-lg-11">
+                                    <h5>Adrian</h5>
+                                    <p>"Always on time. It was wonderful to work with him."</p>
+                                </div>
+                                <div class="checkbox col-lg-1">
+                                    <label>
+                                    <input id="rec1" type="checkbox">
+                                    </label>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -205,7 +291,7 @@
           </div>
           <div id="profii" class="col-lg-3 col-md-3 col-sm-4">
             <div class="circlee"></div>
-            <h4> CHAO-MING CHANG </h4>
+            <h4> Ed Warren </h4>
             <p> Student at National Chiao Tung University </p>
             <p> Hsinchu, Taiwan </p>
           </div>
@@ -214,5 +300,18 @@
     
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="./bootstrap.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $(".showCont").click(function(){
+                $(this).next().toggle();
+            });
+            
+            $("#create_bt").click(function(){
+                $("#form-resume").toggle();
+                $("#create_bt").toggle();
+            });
+        });
+    </script>
 </body>
 </html>
