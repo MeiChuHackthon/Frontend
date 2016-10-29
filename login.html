@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<!--The fixed navbar will overlay your other content, unless you add padding to the top of the body.-->
+<style>
+body {
+  padding-top: 80px;
+}
+@media (max-width: 979px) {
+  body {
+    padding-top: 0px;
+  }
+}
+</style>
+
+	<!--paper style-->
+<link rel="stylesheet" href="./bootstrap.min.css">
+
+  <title>Profile104</title>
+  <link rel="stylesheet" media="all" href="/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" data-turbolinks-track="true" />
+  <script src="/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="C26LYCYi1kV66kN69sIFdeSny8x9yMc7DF4y2QCNjL0ESaxTNNK9w9P2/VuQA3v1sS5qQXnwW1+Sb5N3g7oYRg==" />
+</head>
+
+<body>
+	<!--navbar-->
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../" class="navbar-brand"><img src="./logo.png"></a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">My104<span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="My104">
+                <li><a href="#">Edit Profile</a></li>
+                <!-- <li class="divider"></li> -->
+              </ul>
+            </li>
+            <li>
+              <a href="#">家教</a>
+            </li>
+            <li>
+              <a href="#">外包</a>
+            </li>
+            <li>
+              <a href="#">獵才</a>
+            </li>
+            <li>
+              <a href="#">教育</a>
+            </li>
+            <li>
+              <a href="#">職涯社群</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">張晁銘<span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="Profile">
+                <li><a href="#">更改個人資料</a></li>
+                <li><a href="./logout" target="_blank">登出</a></li>
+                <!-- <li class="divider"></li> -->
+              </ul>
+            </li>
+            <!-- <li><a href="./logout" target="_blank">登出</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+	<!--below the navbar-->
+	<div class="btn btn-default" style="margin-left: 150px;">
+		<a href="signup.html">註冊</a>
+    </div>
+	<div class="btn btn-default">
+		<a href="login.html">登入</a>
+    </div>
+	<div class="btn btn-default">
+		<a href="home.html">Home</a>
+    </div>
+	
+
+<form class="form-horizontal">
+	<fieldset>
+	<br>
+	<div class="form-group" >
+		<div class="col-lg-10">
+			<p style="margin-left: 115px;">log in</p>
+		<div>
+    </div>
+	<!--email-->
+	<div class="form-group">
+		<label for="inputEmail" class="col-lg-2 control-label">Email</label>
+		<div class="col-lg-10">
+			<input  autofocus="autofocus" type="email" value="" name="user[email]" id="user_email" />
+		</div>
+    </div>
+	<!--password-->
+	<div class="form-group">
+		<label for="inputPassword" class="col-lg-2 control-label">Password</label>
+		<div class="col-lg-10">
+			<input  autocomplete="off" type="password" name="user[password]" id="user_password" />
+		</div>
+    </div>
+	<!--remember me-->
+	<div class="form-group">
+		<label for="user_remember_me" class="col-lg-2 control-label">Remember me</label>
+		<div class="col-lg-10">
+			<input name="user[remember_me]" type="hidden" value="0" /><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />
+		</div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">log in</button>
+      </div>
+    </div>
+  </fieldset>
+ </form>
+
+<p class="notice"></p>
+<p class="alert"></p>
+
+</body>
+</html>

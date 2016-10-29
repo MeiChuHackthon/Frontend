@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<!--The fixed navbar will overlay your other content, unless you add padding to the top of the body.-->
+<style>
+body {
+  padding-top: 80px;
+}
+@media (max-width: 979px) {
+  body {
+    padding-top: 0px;
+  }
+}
+</style>
+
+	<!--paper style-->
+<link rel="stylesheet" href="./bootstrap.min.css">
+
+
+<body>
+	<!--navbar-->
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../" class="navbar-brand"><img src="./logo.png"></a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">My104<span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="My104">
+                <li><a href="#">Edit Profile</a></li>
+                <!-- <li class="divider"></li> -->
+              </ul>
+            </li>
+            <li>
+              <a href="#">家教</a>
+            </li>
+            <li>
+              <a href="#">外包</a>
+            </li>
+            <li>
+              <a href="#">獵才</a>
+            </li>
+            <li>
+              <a href="#">教育</a>
+            </li>
+            <li>
+              <a href="#">職涯社群</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">張晁銘<span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="Profile">
+                <li><a href="#">更改個人資料</a></li>
+                <li><a href="./logout" target="_blank">登出</a></li>
+                <!-- <li class="divider"></li> -->
+              </ul>
+            </li>
+            <!-- <li><a href="./logout" target="_blank">登出</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+	<!--below the navbar-->
+	<div class="btn btn-default" style="margin-left: 150px;">
+		<a href="signup.html">註冊</a>
+    </div>
+	<div class="btn btn-default">
+		<a href="login.html">登入</a>
+    </div>
+	<div class="btn btn-default">
+		<a href="home.html">Home</a>
+    </div>
+	
+	<!--sign up form-->
+<form class="form-horizontal">
+	<fieldset>
+	<br>
+	<div class="form-group" >
+		<div class="col-lg-10">
+			<p style="margin-left: 135px">log in</p>
+		<div>
+    </div>
+	<!--email-->
+	<div class="form-group">
+		<label for="inputEmail" class="col-lg-2 control-label">Email</label>
+		<div class="col-lg-10">
+			<input  autofocus="autofocus" type="email" value="" name="user[email]" id="user_email" />
+		</div>
+    </div>
+	<!--password-->
+	<div class="form-group">
+		<label for="inputPassword" class="col-lg-2 control-label">Password</label>
+		<div class="col-lg-10">
+			<input  autocomplete="off" type="password" name="user[password]" id="user_password" />
+		</div>
+    </div>
+	<!--remember me-->
+	<div class="form-group">
+		<label for="user_remember_me" class="col-lg-2 control-label">Remember me</label>
+		<div class="col-lg-10">
+			<input name="user[remember_me]" type="hidden" value="0" /><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />
+		</div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">log in</button>
+      </div>
+    </div>
+  </fieldset>
+ </form>
+
+<p class="notice"></p>
+<p class="alert"></p>
+
+</body>
+
+</html>
