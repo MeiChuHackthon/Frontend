@@ -195,6 +195,36 @@ body {
 					 		<button id="exp_submit" onclick="addRow_w()" class="btn btn-md btn-info">New</button>
 					 	</div>
 				 	</div>
+		
+			<div style="font-size:30px">專案經歷 <button class="btn btn-md btn-primary" id="add_exp_p">+</button></div>
+				 	<table id="exp_table_p" class="table">
+				 		<tr>
+				 			<th style="width: 33.3333%;">專案名稱</th>
+				 			<th style="width: 33.3333%;">完成日期</th>
+				 			<th style="height: auto; width: 33.3333%;">描述</th>
+				 		</tr>
+				 	</table>
+				 	<div id="exp_list_p">
+					 	<div id='exp_form_p' style="display:none">
+					 		<div>
+					 		<label>專案名稱</label>
+					 		<input type="text" id="s_name_p">
+					 		</div>
+					 		<div>
+					 		<label>完成日期</label>
+					 		<input type="text" id="d_year_p">
+					 		</div>
+					 		<div>
+					 		<label>連結</label>
+					 		<input type="text" id="link_p">
+					 		</div>
+					 		<div>
+					 		<label>描述</label>
+					 		<textarea id="describe" style="text-align: left; width: 100%;"></textarea>
+					 		</div>
+					 		<button id="pro_submit" onclick="addRow_p()" class="btn btn-md btn-info">New</button>
+					 	</div>
+				 	</div>
 		</div>
 
 	</div>
@@ -252,6 +282,9 @@ body {
 	$("#add_exp_w").click(function (){
 		$("#exp_form_w").toggle();
 	});
+	$("#add_exp_p").click(function (){
+		$("#exp_form_p").toggle();
+	});
 	function addRow(){
 		var tr = "<tr><td>"+ $('#s_name').val() + "</td><td>" + $('#d_name').val()+ "</td><td>" 
 				+ $('#g_year').val()+"</td></tr>";
@@ -268,5 +301,13 @@ body {
 		$('#d_name_w').val("");
 		$('#s_year').val("");
 		$('#e_year').val("");
+	};
+	function addRow_p(){
+		var tr = "<tr><td><a href="+ $('#link_p').val()+ ">" + $('#s_name_p').val() + "</a></td><td>" + $('#d_year_p').val()+ "</td><td>" + $('#describe').val()+"</td></tr>";
+		$("#exp_table_p").append(tr);
+		$('#link_p').val("");
+		$('#s_name_p').val("");
+		$('#d_year_p').val("");
+		$('#describe').val("");
 	};
 </script>
