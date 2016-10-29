@@ -13,6 +13,21 @@
         ul {
             padding-left: 0px;
         }
+        #profii {
+            text-align: center;
+            border: 1px solid lightgrey;
+            padding: 10px;
+            box-shadow: 1px 1px 2px #888888;
+        }
+        .circlee {
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            background: black;
+            -moz-border-radius: 100px;
+            -webkit-border-radius: 100px;
+            border-radius: 100px;
+        }
     </style>
 </head>
 <body>
@@ -83,13 +98,13 @@
     
     <div class="container">
         <div class="row">
-          <div class="col-lg-10">
+          <div class="col-lg-9">
             <div class="well bs-component">
               <form class="form-horizontal">
                 <fieldset>
                 
                   <div class="form-group">
-                    <label for="resumeName" class="col-lg-2 control-label">Name</label>
+                    <label for="resumeName" class="col-lg-2 control-label">Custom Name</label>
                     <div class="col-lg-10">
                       <input type="text" class="form-control" id="resumeName" placeholder="Name">
                     </div>
@@ -161,9 +176,19 @@
               </form>
             </div>
           </div>
+          <div id="profii" class="col-lg-3">
+            <div class="circlee"></div>
+            <h4> CHAO-MING CHANG </h4>
+            <p> Student at National Chiao Tung University </p>
+            <p> Hsinchu, Taiwan </p>
+          </div>
         </div>
     </div>
     
+    
+    <script>
+        
+    </script>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="./bootstrap.min.js"></script>
 </body>
