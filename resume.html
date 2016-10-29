@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -12,6 +12,15 @@
         }
         ul {
             padding-left: 0px;
+        }
+        @media screen and (max-width: 767px) {
+            #profii {
+                display: none;
+                text-align: center;
+                border: 1px solid lightgrey;
+                padding: 10px;
+                box-shadow: 1px 1px 2px #888888;
+            }
         }
         #profii {
             text-align: center;
@@ -98,11 +107,29 @@
     
     <div class="container">
         <div class="row">
-          <div class="col-lg-9">
+          <div class="col-lg-9 col-md-9 col-sm-8">
+            <div>
+                <ul>
+                    <!-- LIST ACTIVE RESUMES -->
+                    <li>
+                        Resume1
+                        <button class="showCont" type="button">+</button>
+                        <div id="item-resume1">
+                        </div>
+                    </li>
+                    <li>
+                        Resume2
+                        <button class="showCont" type="button">+</button>
+                        <div id="item-resume2">
+                        
+                        </div>
+                    </li>
+                </ul>
+            </div>
             <div class="well bs-component">
               <form class="form-horizontal">
                 <fieldset>
-                
+                  <legend>Create Resume</legend>
                   <div class="form-group">
                     <label for="resumeName" class="col-lg-2 control-label">Custom Name</label>
                     <div class="col-lg-10">
@@ -176,7 +203,7 @@
               </form>
             </div>
           </div>
-          <div id="profii" class="col-lg-3">
+          <div id="profii" class="col-lg-3 col-md-3 col-sm-4">
             <div class="circlee"></div>
             <h4> CHAO-MING CHANG </h4>
             <p> Student at National Chiao Tung University </p>
@@ -185,10 +212,6 @@
         </div>
     </div>
     
-    
-    <script>
-        
-    </script>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="./bootstrap.min.js"></script>
 </body>
