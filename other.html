@@ -98,7 +98,7 @@ body {
 			    <ul class="list-group">
 			    	<div class="row">
 			        <li><div class="col-lg-2"><label>姓名:</label></div>
-			        	<div class="col-lg-10" id="name" style="display:block">Charlie</div>
+			        	<div class="col-lg-10" id="name" style="display:block">Mark</div>
 			        </li>
 			        </div>
 
@@ -116,7 +116,7 @@ body {
 
 					<div class="row">
 				    <li><div class="col-lg-2"><label>信箱:</label></div>
-				    	<div class="col-lg-10" id="email" style="display:block">Charlie@gmail.com</div>
+				    	<div class="col-lg-10" id="email" style="display:block">Mark@gmail.com</div>
 				    </li>
 				    </div>
 				    <div class="row">
@@ -160,20 +160,23 @@ body {
 				 	<table id="skill_table" class="table">
 				 		<tr>
 				 			<th>名稱</th>
-				 			<th>受稱讚</th>
+				 			<th>他人認同</th>
 				 		</tr>
 				 		<tr>
 				 			<td>C++</td>
 				 			<td>
-				 				<span> 				( </span>
 				 				<span id="praised-1"> 5 </span>
-				 				<span> 				) </span>
+				 				人
 				 				<input type="button" value="praise" style="inline" id="praise-1">
 				 			</td>
 				 		</tr>
 				 		<tr>
 				 			<td>Python</td>
-				 			<td></td>
+				 			<td>
+				 				<span id="praised-2"> 5 </span>
+				 				人
+				 				<input type="button" value="praise" style="inline" id="praise-2">
+				 			</td>
 				 		</tr>
 				 	</table>
 
@@ -213,7 +216,11 @@ body {
 <script src="./bootstrap.min.js"></script>
 <script>
 	$("#praise-1").click(function(){
-			var a = parseInt( text($("#praised-1")) );
-			document.getElementById("praised-1").innerHTML = a+1;
+			var a = parseInt( $("#praised-1").text() );
+			$("#praised-1").text(a+1);
+	});
+	$("#praise-2").click(function(){
+			var a = parseInt( $("#praised-2").text() );
+			$("#praised-2").text(a+1);
 	});
 </script>
