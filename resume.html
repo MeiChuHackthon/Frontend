@@ -37,8 +37,29 @@
             -webkit-border-radius: 100px;
             border-radius: 100px;
         }
+        #resume-list li h5 {
+            display: inline-block;
+        }
+        .resume-title {
+            border-bottom: 2px solid grey;
+            margin-left: 2px;
+            margin-right: 10px;
+        }
         .item-resume {
             display: none;
+        }
+        .item-resume li {
+            display: inline-block;
+        }
+        .item-resume h6 {
+            border-bottom: 2px solid orange;
+            display: inline-block;
+        }
+        .rec-ov li {
+            display: block;
+        }
+        .showCont {
+        
         }
         #form-resume {
             display: none;
@@ -51,7 +72,7 @@
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="../" class="navbar-brand"><img src="./logo.png"></a>
+          <a href="home.html" class="navbar-brand"><img src="./logo.png"></a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -115,19 +136,72 @@
         <div class="row">
           <div class="col-lg-9 col-md-9 col-sm-8">
             <div>
-                <ul>
+                <ul id="resume-list">
                     <!-- LIST ACTIVE RESUMES -->
                     <li>
-                        Resume1
-                        <button class="showCont" type="button">+</button>
+                        <div class="resume-title row">
+                            <h5 class="col-lg-11 col-xs-11">Engineer Resume</h5>
+                            <h5 class="showCont col-lg-1 col-xs-1">+</h5>
+                        </div>
                         <div id="item-resume1" class="item-resume">
-                            MAYAHEEE MAYAHAAAA MAYAHOOOHOOO
+                            <h6>Languages</h6>
+                            <ul>
+                                <li>English,</li>
+                                <li>Chinese</li>
+                            </ul>
+                            <h6>Experience</h6>
+                            <ul>
+                                <li>Tutor,</li>
+                                <li>Software Intern</li>
+                            </ul>
+                            <h6>Skills</h6>
+                            <ul>
+                                <li>C++,</li>
+                                <li>Java</li>
+                            </ul>
+                            <h6>Recommendations</h6>
+                            <ul class="rec-ov">
+                                <li>Perry, <small>software engineer</small>
+                                <p>"He's an awesome person to work with."</p>
+                                </li>
+                                <li>Adrian, <small>designer</small>
+                                <p>"Always on time. It was wonderful working with him."</p>
+                                </li>
+                            </ul>
+                            <hr>
                         </div>
                     </li>
                     <li>
-                        Resume2
-                        <button class="showCont" type="button">+</button>
+                        <div class="resume-title row">
+                            <h5 class="col-lg-11 col-xs-11">Design Resume</h5>
+                            <h5 class="showCont col-lg-1 col-xs-1">+</h5>
+                        </div>
                         <div id="item-resume2" class="item-resume">
+                            <h6>Languages</h6>
+                            <ul>
+                                <li>English,</li>
+                                <li>Chinese</li>
+                            </ul>
+                            <h6>Experience</h6>
+                            <ul>
+                                <li>Tutor,</li>
+                                <li>Software Intern</li>
+                            </ul>
+                            <h6>Skills</h6>
+                            <ul>
+                                <li>Excel,</li>
+                                <li>Photoshop</li>
+                            </ul>
+                            <h6>Recommendations</h6>
+                            <ul class="rec-ov">
+                                <li>Perry, <small>software engineer</small>
+                                <p>"He's an awesome person to work with."</p>
+                                </li>
+                                <li>Adrian, <small>designer</small>
+                                <p>"Always on time. It was wonderful working with him."</p>
+                                </li>
+                            </ul>
+                            <hr>
                         </div>
                     </li>
                 </ul>
@@ -254,7 +328,7 @@
                             <!-- For each, append to rec-list -->
                             <li>
                                 <div class="col-lg-11">
-                                    <h5>Perry</h5>
+                                    <h5>Perry, <small>software engineer</small></h5>
                                     <p>"He's an awesome person to work with."</p>
                                 </div>
                                 <div class="checkbox col-lg-1">
@@ -265,8 +339,8 @@
                             </li>
                             <li>
                                 <div class="col-lg-11">
-                                    <h5>Adrian</h5>
-                                    <p>"Always on time. It was wonderful to work with him."</p>
+                                    <h5>Adrian, <small>designer</small></h5>
+                                    <p>"Always on time. It was wonderful working with him."</p>
                                 </div>
                                 <div class="checkbox col-lg-1">
                                     <label>
@@ -280,7 +354,7 @@
                   
                   <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
-                      <button type="reset" class="btn btn-default">Cancel</button>
+                      <button type="reset" class="btn btn-default" onclick="cancelForm()">Cancel</button>
                       <button type="submit" class="btn btn-primary">Create Resume</button>
                     </div>
                   </div>
@@ -304,14 +378,27 @@
     <script>
         $(document).ready(function(){
             $(".showCont").click(function(){
-                $(this).next().toggle();
+                $(this).parent().next().toggle();
+                if( $(this).html() === "+"){
+                    $(this).html("-");
+                }
+                else {
+                    $(this).html("+");
+                }
             });
             
             $("#create_bt").click(function(){
                 $("#form-resume").toggle();
                 $("#create_bt").toggle();
             });
+            
         });
+        
+        function cancelForm(){
+                $("#form-resume").toggle();
+                $("#create_bt").toggle();
+            }
+        
     </script>
 </body>
 </html>
