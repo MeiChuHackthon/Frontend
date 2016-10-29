@@ -1,0 +1,170 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./bootstrap.min.css" media="screen">
+    <style>
+        li {
+            list-style-type: none;
+        }
+        ul {
+            padding-left: 0px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../" class="navbar-brand"><img src="./logo.png"></a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">My104<span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="My104">
+                <li><a href="#">Edit Profile</a></li>
+                <!-- <li class="divider"></li> -->
+              </ul>
+            </li>
+            <li>
+              <a href="#">家教</a>
+            </li>
+            <li>
+              <a href="#">外包</a>
+            </li>
+            <li>
+              <a href="#">獵才</a>
+            </li>
+            <li>
+              <a href="#">教育</a>
+            </li>
+            <li>
+              <a href="#">職涯社群</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">張晁銘<span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="Profile">
+                <li><a href="#">更改個人資料</a></li>
+                <li><a href="./logout" target="_blank">登出</a></li>
+                <!-- <li class="divider"></li> -->
+              </ul>
+            </li>
+            <!-- <li><a href="./logout" target="_blank">登出</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- CONTENT -->
+    <div class="container">
+      <div class="page-header" id="banner">
+        <div class="row">
+          <div class="col-lg-8 col-md-7 col-sm-6">
+            <h1>Resume</h1>
+            <p class="lead">Create your field-specific resume.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-10">
+            <div class="well bs-component">
+              <form class="form-horizontal">
+                <fieldset>
+                
+                  <div class="form-group">
+                    <label for="resumeName" class="col-lg-2 control-label">Name</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" id="resumeName" placeholder="Name">
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                        <label for="inputLang" class="col-lg-2 control-label">Languages</label>
+                        <div class="col-lg-10">
+                            <div class="checkbox">
+                                <label>
+                                    <input id="inputLang" type="checkbox">
+                                </label>
+                            </div>
+                            <ul id="lang-list">
+                                <!-- For each, append to lang-list -->
+                            </ul>
+                        </div>
+                  </div>
+                  
+                  <div class="form-group">
+                        <label for="inputExp" class="col-lg-2 control-label">Experience</label>
+                        <div class="col-lg-10">
+                        <div class="checkbox">
+                            <label>
+                                <input id="inputExp" type="checkbox">
+                            </label>
+                        </div>
+                        <ul id="exp-list">
+                            <!-- For each, append to exp-list -->
+                        </ul>
+                        </div>
+                  </div>
+                  
+                  <div class="form-group">
+                        <label for="inputSkills" class="col-lg-2 control-label">Skills</label>
+                        <div class="col-lg-10">
+                        <div class="checkbox">
+                            <label>
+                                <input id="inputSkills" type="checkbox">
+                            </label>
+                        </div>
+                        <ul id="skills-list">
+                            <!-- For each, append to skills-list -->
+                        </ul>
+                        </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label class="col-lg-2 control-label">Recommendations</label>
+                    <div class="col-lg-10">
+                        <ul id="rec-list">
+                            <!-- For each, append to rec-list -->
+                            <li>
+                                <label for="rec1" class="control-label">David</label>
+                                <input id="rec1" type="checkbox">
+                            </li>
+                        </ul>
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                      <button type="reset" class="btn btn-default">Cancel</button>
+                      <button type="submit" class="btn btn-primary">Create Resume</button>
+                    </div>
+                  </div>
+                  
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="./bootstrap.min.js"></script>
+</body>
+</html>
