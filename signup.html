@@ -59,7 +59,7 @@ body {
 
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">張晁銘<span class="caret"></span></a>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"></a>
               <ul class="dropdown-menu" aria-labelledby="Profile">
                 <li><a href="#">更改個人資料</a></li>
                 <li><a href="./logout" target="_blank">登出</a></li>
@@ -72,53 +72,51 @@ body {
       </div>
     </div>
 	<!--below the navbar-->
-	<div class="btn btn-default" style="margin-left: 150px;">
-		<a href="signup.html">註冊</a>
-    </div>
+	<a class="btn btn-primary" href="login.html"  style="margin-left: 150px;">註冊</a>
 	<div class="btn btn-default">
 		<a href="login.html">登入</a>
     </div>
 	<div class="btn btn-default">
-		<a href="home.html">Home</a>
+		<a href="home.html">首頁</a>
     </div>
 	
 	<!--sign up form-->
 <form class="form-horizontal">
 	<fieldset>
 	<br>
-	<div class="form-group" >
-		<div class="col-lg-10">
-			<p style="margin-left: 135px">log in</p>
-		<div>
-    </div>
+  <br>
 	<!--email-->
-	<div class="form-group">
-		<label for="inputEmail" class="col-lg-2 control-label">Email</label>
+	<div class="form-group" style="margin-left:-100px;">
+		<label for="inputEmail" class="col-lg-2 control-label">信箱</label>
 		<div class="col-lg-10">
 			<input  autofocus="autofocus" type="email" value="" name="user[email]" id="user_email" />
 		</div>
     </div>
 	<!--password-->
-	<div class="form-group">
-		<label for="inputPassword" class="col-lg-2 control-label">Password</label>
+	<div class="form-group" style="margin-left:-100px;">
+		<label for="inputPassword" class="col-lg-2 control-label">密碼</label>
 		<div class="col-lg-10">
 			<input  autocomplete="off" type="password" name="user[password]" id="user_password" />
 		</div>
     </div>
-	<!--remember me-->
-	<div class="form-group">
-		<label for="user_remember_me" class="col-lg-2 control-label">Remember me</label>
-		<div class="col-lg-10">
-			<input name="user[remember_me]" type="hidden" value="0" /><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />
-		</div>
+	<!--password-correct-->
+	<div class="form-group" style="margin-left:-100px;">
+    <label for="inputPassword" class="col-lg-2 control-label">密碼確認</label>
+    <div class="col-lg-10">
+      <input  autocomplete="off" type="password" name="user[password]" id="user_password" />
     </div>
-    <div class="form-group">
+    </div>
+    <!--
+    <div class="form-group" style="margin-left:-100px;">
       <div class="col-lg-10 col-lg-offset-2">
         <button type="reset" class="btn btn-default">Cancel</button>
         <button type="submit" class="btn btn-primary">log in</button>
       </div>
     </div>
+  -->
   </fieldset>
+  <a class="btn btn-primary" href="login.html"  style="margin-left: 230px;">取消</a>
+  <a class="btn btn-primary" href="home.html">註冊</a>
  </form>
 
 <p class="notice"></p>
