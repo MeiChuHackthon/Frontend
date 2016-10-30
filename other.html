@@ -167,7 +167,7 @@ body {
 				 			<td>
 				 				<span id="praised-1"> 5 </span>
 				 				人
-				 				<input type="button" value="praise" style="inline" id="praise-1">
+				 				<input class="btn btn-primary" type="button" value="praise" style="inline" id="praise-1">
 				 			</td>
 				 		</tr>
 				 		<tr>
@@ -175,7 +175,7 @@ body {
 				 			<td>
 				 				<span id="praised-2"> 5 </span>
 				 				人
-				 				<input type="button" value="praise" style="inline" id="praise-2">
+				 				<input class="btn btn-primary" type="button" value="praise" style="inline" id="praise-2">
 				 			</td>
 				 		</tr>
 				 	</table>
@@ -218,9 +218,11 @@ body {
 	$("#praise-1").click(function(){
 			var a = parseInt( $("#praised-1").text() );
 			$("#praised-1").text(a+1);
+			$(this).attr("disabled",true);
 	});
 	$("#praise-2").click(function(){
 			var a = parseInt( $("#praised-2").text() );
 			$("#praised-2").text(a+1);
+			$(this).attr("disabled",true);
 	});
 </script>
