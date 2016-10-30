@@ -148,7 +148,7 @@ body {
 				    </li>
 				    </div>
 				</ul>
-			<div style="font-size:30px">學習經歷 <button class="btn btn-md btn-primary" id="add_exp">+</button></div>
+			<div style="font-size:30px">學習經歷 <button class="btn btn-md btn-primary" id="add_exp">+</button><span style="font-size: 14px"><input type="checkbox" style="margin-left:10px"> 僅限自己</span></div>
 					<div id="exp_list">
 					 	<div id='exp_form' style="display:none">
 					 		<div>
@@ -175,7 +175,7 @@ body {
 				 	</table>
 				 	
 
-			<div style="font-size:30px">專業技能 <button class="btn btn-md btn-primary" id="add_skill">+</button></div>
+			<div style="font-size:30px">專業技能 <button class="btn btn-md btn-primary" id="add_skill">+</button><span style="font-size: 14px"><input type="checkbox" style="margin-left:10px"> 僅限自己</span></div>
 					<div id="skill_list">
 					 	<div id='skill_form' style="display:none">
 					 		<div>
@@ -200,7 +200,7 @@ body {
 				 	</table>
 				 	
 
-			<div style="font-size:30px">工作經歷 <button class="btn btn-md btn-primary" id="add_exp_w">+</button></div>
+			<div style="font-size:30px">工作經歷 <button class="btn btn-md btn-primary" id="add_exp_w">+</button><span style="font-size: 14px"><input type="checkbox" style="margin-left:10px"> 僅限自己</span></div>
 					<div id="exp_list_w">
 					 	<div id='exp_form_w' style="display:none">
 					 		<div>
@@ -227,7 +227,7 @@ body {
 				 		</tr>
 				 	</table>
 				 		
-			<div style="font-size:30px">專案經歷 <button class="btn btn-md btn-primary" id="add_exp_p">+</button></div>
+			<div style="font-size:30px">專案經歷 <button class="btn btn-md btn-primary" id="add_exp_p">+</button><span style="font-size: 14px"><input type="checkbox" style="margin-left:10px"> 僅限自己</span></div>
 					<div id="exp_list_p">
 					 	<div id='exp_form_p' style="display:none">
 					 		<div>
@@ -256,7 +256,27 @@ body {
 				 			<th style="height: auto; width: 33.3333%;">描述</th>
 				 		</tr>
 				 	</table>
-				 	
+				
+			<div style="font-size:30px">推薦人 <button class="btn btn-md btn-primary" id="add_rec">+</button><span style="font-size: 14px"><input type="checkbox" style="margin-left:10px">僅限自己</span></div>
+				<div id="rec_list">
+				 	<div id='rec_form' style="display:none">
+				 		<div>
+				 		<input type="checkbox" id="MARK_check" value="Mark">
+				 		<label>Mark</label>
+				 		</div>
+				 		<div>
+				 		<input type="checkbox" id="MARY_check" value="Mary">
+				 		<label>Mary</label>
+				 		</div>
+				 		<button id="pro_submit" onclick="addRow_rec()" class="btn btn-md btn-info">New</button>
+				 	</div>
+			 	</div>
+			 	<table id="rec_table" class="table">
+			 		<tr>
+			 			<th>推薦人</th>
+			 			<th>回覆</th>
+			 		</tr>
+			 	</table>
 		</div>
 
 	</div>
@@ -311,6 +331,9 @@ body {
 	$("#add_skill").click(function (){
 		$("#skill_form").toggle();
 	});
+	$("#add_rec").click(function (){
+		$("#rec_form").toggle();
+	});
 	function addRow(){
 		var tr = "<tr><td>"+ $('#s_name').val() + "</td><td>" + $('#d_name').val()+ "</td><td>" 
 				+ $('#g_year').val()+"</td></tr>";
@@ -341,5 +364,22 @@ body {
 		var tr = "<tr><td>"+ $('#skill_name').val() + "</td><td>0 人 </td></tr>";
 		$("#skill_table").append(tr);
 		$('#skill_name').val("");
+	};
+
+	function addRow_rec(){
+		var tr
+		if( $("#MARK_check").prop("checked") ){
+			tr = "<tr><td>"+ $('#MARK_check').val() + "</td><td>" + "He's an awesome person to work with."
+				+"</td></tr>";
+			$('#rec_table').append(tr);
+			$("#MARK_check").prop("checked", false);
+		}
+		if( $("#MARY_check").prop("checked") ){
+			tr = "<tr><td>"+ $('#MARY_check').val() + "</td><td>" + "Always on time. It was wonderful working with him."
+				+"</td></tr>";
+			$('#rec_table').append(tr);
+			$("#MARY_check").prop("checked", false);
+		}
+		$('#rec_form').toggle();
 	};
 </script>
