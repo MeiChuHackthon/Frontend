@@ -10,6 +10,12 @@
 	<!--font awsome-->
 	<!--<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">-->
 	 <style>
+	ul {
+	  list-style-type: none;
+	}
+	li {
+		font-size: 20px;
+	}
 body {
   padding-top: 80px;
 }
@@ -71,133 +77,262 @@ body {
           </ul>
         </div>
       </div>
-    </div>
-	<div class="profile">
+</div>
+	
 	    <!--left part-->
-	    <div class="container">
-				<div class="col-lg-3 col-md-3 col-sm-4">
-					<div class="list-group table-of-contents">
-						<ul class="nav nav-pills">
-							<li class="active"><a class="list-group-item" href="#navbar">基本資料</a></li>
-						</ul>
-					</div>
-			    </div>
+<div class="container row">
+	<div class = "col-md-2">
+				  	<ul >
+				  	  <li class="active"><a href="home.html" style="font-size:20px;">首頁</a></li>
+				  	  <li><a href="./profile.html" style="font-size:20px;">Profile</a></li>
+				  	  <li><a href="resume.html" style="font-size:20px;">履歷</a></li>
+				  	  
+				  	</ul>
+	</div>
 
 				<!--Right Part-->
-				<div class="col-lg-8">
-		            <div class="bs-component">
-		              <form class="form-horizontal">
-		              	<div id="basic">
-		              		<div class="col-lg-12">
-				        		<div class="page-header">
-				            	<h2 id="forms" >基本資料</h2>
-				          		</div>
-				         	</div>
-			              	<div class="form-group  control-label">
-			                    <label for="inputName" class="col-lg-1 control-label">姓名</label>
-			                    <div class="col-lg-3">
-			                      <input type="text" class="form-control" name="user[name]" id="inputName">
-			                    </div>
 
-			                    <label for="inputGender" class="col-lg-1 control-label">性別</label>
-			    		        <div class="col-lg-1" style="margin-left:20px;">
-									<div  class="radio" style:"text-align: left;">
-					                    <lable>
-					                      <input type="radio" name="user[gender]" id="inputGender">男
-					                    </lable>
-									</div>
-									<div  class="radio" style:"text-align: left;">
-					                    <lable>
-											<input type="radio" name="user[gender]" id="inputGender">女
-					                    </lable>
-									</div>
-								</div>
-			             	</div>
+	<div class="col-md-9 jumbotron">
+		<div class="bs-docs-section">
+			<div style="font-size:30px">基本資料 <a class="btn btn-sm btn-warning" style="font-size: 20px" id="edit">  Edit</a><a class="btn btn-sm btn-success" style="font-size: 20px;display: none" id="save">  Save</a></div>
+			
+			    <ul class="list-group">
+			    	<div class="row">
+			        <li><div class="col-lg-2"><label>姓名:</label></div>
+			        	<div class="col-lg-10" id="name" style="display:block">Charlie</div>
+			        	<input id="name_i" type="text" style="display:none">
+			        </li>
+			        </div>
 
+			        <div class="row">
+			        <li><div class="col-lg-2"><label>性別:</label></div>
+			        	<div class="col-lg-10" id="gender" style="display:block">男</div>
+			        	<input id="gender_i" type="text" style="display:none">
+			        </li>
+			    	</div>
 
-				            <div class="form-group  control-label">
-				              <label for="inputEmail" class="col-lg-1 control-label">電話</label>
-				              <div class="col-lg-3">
-				                <input type="text" class="form-control" name="user[phone]" id="inputEmail" >
-				              </div>
-				              <label for="inputPhone" class="col-lg-1 control-label">信箱</label>
-				              <div class="col-lg-3">
-				                <input type="text" class="form-control" name="user[email]" id="inputPhone" >
-				              </div>
-				            </div>
+					<div class="row">
+					<li><div class="col-lg-2"><label>電話:</label></div>
+						<div class="col-lg-10" id="phone" style="display:block"></div>
+						<input id="phone_i" type="text" style="display:none">
+					</li>
+					</div>
 
-							<div class="form-group  control-label">
-				              <label for="user_birdate" class="col-lg-1 control-label">生日</label>
-				              <div class="col-lg-3">
-				              	<input type="text" class="form-control" name="user[birdate]" id="user_birdate">
-				              </div>
+					<div class="row">
+				    <li><div class="col-lg-2"><label>信箱:</label></div>
+				    	<div class="col-lg-10" id="email" style="display:block"></div>
+				    	<input id="email_i" type="text" style="display:none">
+				    </li>
+				    </div>
+				    <div class="row">
+				    <li><div class="col-lg-2"><label>生日:</label></div>
+				    	<div class="col-lg-10" id="birdate" style="display:block"></div>
+				    	<input id="birdate_i" type="text" style="display:none">
+				    </li>
+				    </div>
 
-				              <label for="inputmilitary_service" class="col-lg-1 control-label">兵役</label>
-			    		      <div class="col-lg-1" style="margin-left:20px;">
-								<div class="radio" style:"text-align: left;">
-				                    <div>
-				                      <input type="radio" name="user[military_service]" id="inputmilitary_service">役畢
-				                    </div>
-								</div>
-								<div  class="radio" style:"text-align: left;">
-				                    <div>
-										<input type="radio" name="user[military_service]" id="inputmilitary_service">未役
-				                    </div>
-								</div>
-							  </div>
-				            </div>
+				    <div class="row">
+				    <li><div class="col-lg-2"><label>兵役:</label></div>
+				    	<div class="col-lg-10" id="military" style="display:block">役畢</div>
+				    	<input id="military_i" type="text" style="display:none">
+				    </li>
+				    </div>
 
-				            <div class="form-group  control-label">
-				              <label for="inputAddress" class="col-lg-1 control-label">地址</label>
-				              <div class="col-lg-10">
-				                <input type="text" class="form-control" name="user[address]" id="inputAddress" >
-				              </div>
-				            </div>
-			        	</div>
+				    <div class="row">
+				    <li><div class="col-lg-2"><label>地址:</label></div>
+				    	<div class="col-lg-10" id="address" style="display:block"></div>
+				    	<input id="address_i" type="text" style="display:none">
+				    </li>
+				    </div>
+				</ul>
+			<div style="font-size:30px">學習經歷 <button class="btn btn-md btn-primary" id="add_exp">+</button></div>
+				 	<table id="exp_table" class="table">
+				 		<tr>
+				 			<th>校名</th>
+				 			<th>科系</th>
+				 			<th>畢業年分</th>
+				 		</tr>
+				 	</table>
+				 	<div id="exp_list">
+					 	<div id='exp_form' style="display:none">
+					 		<div>
+					 		<label>校名</label>
+					 		<input type="text" id="s_name">
+					 		</div>
+					 		<div>
+					 		<label>科系</label>
+					 		<input type="text" id="d_name">
+					 		</div>
+					 		<div>
+					 		<label>畢業年分</label>
+					 		<input type="text" id="g_year">
+					 		</div>
+					 		<button id="exp_submit" onclick="addRow()" class="btn btn-md btn-info">New</button>
+					 	</div>
+				 	</div>
 
-			        	<div id="basic">
-		              		<div class="col-lg-12">
-				        		<div class="page-header">
-				            	<h2 id="forms">學習經歷</h2>
-				          		</div>
-				         	</div>
-			              	
-			        	</div>
+			<div style="font-size:30px">專業技能 <button class="btn btn-md btn-primary" id="add_skill">+</button></div>
+				 	<table id="skill_table" class="table">
+				 		<tr>
+				 			<th>名稱</th>
+				 			<th>他人認同</th>
+				 		</tr>
+				 		<tr>
+				 			<td>C++</td>
+				 			<td>
+				 				<span id="praised-1"> 2 </span>
+				 				人
+				 			</td>
+				 		</tr>
+				 	</table>
+				 	<div id="skill_list">
+					 	<div id='skill_form' style="display:none">
+					 		<div>
+					 		<label>名稱</label>
+					 		<input type="text" id="skill_name">
+					 		</div>
+					 		<button id="skill_submit" onclick="addRow_skill()" class="btn btn-md btn-info">New</button>
+					 	</div>
+				 	</div>
 
-		              </form>
-		              <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
-		        	</div>
-
-
-
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-				  	
-					  <div id="showBlock">assaasasasas</div>
-
-					  <input type="button" id="btn" value="addItem" />
-
-				
-			</div>
-
-		        </div>
+			<div style="font-size:30px">工作經歷 <button class="btn btn-md btn-primary" id="add_exp_w">+</button></div>
+				 	<table id="exp_table_w" class="table">
+				 		<tr>
+				 			<th>公司名稱</th>
+				 			<th>職位</th>
+				 			<th>任職期間</th>
+				 		</tr>
+				 	</table>
+				 	<div id="exp_list_w">
+					 	<div id='exp_form_w' style="display:none">
+					 		<div>
+					 		<label>公司名稱</label>
+					 		<input type="text" id="s_name_w">
+					 		</div>
+					 		<div>
+					 		<label>職位</label>
+					 		<input type="text" id="d_name_w">
+					 		</div>
+					 		<div>
+					 		<label>任職期間</label>
+					 		<input type="text" id="s_year"> ~ 
+					 		<input type="text" id="e_year">
+					 		</div>
+					 		<button id="exp_submit" onclick="addRow_w()" class="btn btn-md btn-info">New</button>
+					 	</div>
+				 	</div>		
+			<div style="font-size:30px">專案經歷 <button class="btn btn-md btn-primary" id="add_exp_p">+</button></div>
+				 	<table id="exp_table_p" class="table">
+				 		<tr>
+				 			<th style="width: 33.3333%;">專案名稱</th>
+				 			<th style="width: 33.3333%;">完成日期</th>
+				 			<th style="height: auto; width: 33.3333%;">描述</th>
+				 		</tr>
+				 	</table>
+				 	<div id="exp_list_p">
+					 	<div id='exp_form_p' style="display:none">
+					 		<div>
+					 		<label>專案名稱</label>
+					 		<input type="text" id="s_name_p">
+					 		</div>
+					 		<div>
+					 		<label>完成日期</label>
+					 		<input type="text" id="d_year_p">
+					 		</div>
+					 		<div>
+					 		<label>連結</label>
+					 		<input type="text" id="link_p">
+					 		</div>
+					 		<div>
+					 		<label>描述</label>
+					 		<textarea id="describe" style="text-align: left; width: 100%;"></textarea>
+					 		</div>
+					 		<button id="pro_submit" onclick="addRow_p()" class="btn btn-md btn-info">New</button>
+					 	</div>
+				 	</div>
 		</div>
-</body>
 
+	</div>
+</div>
+
+</body>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="./bootstrap.min.js"></script>
 <script>
-		  //set the default value
-		  var txtId = 1;
-		  
-		  //add input block in showBlock
-		  $("#btn").click(function () {
-		      $("#showBlock").append('<div id="div' + txtId + '">Input:<input type="text" name="test[]" /> <input type="button" value="del" onclick="deltxt('+txtId+')"></div>');
-		      txtId++;
-		  });
-		  //remove div
-		  function deltxt(id) {
-		      $("#div"+id).remove();
-		  }
+	$("#edit").click(function(){
+		//alert("123");
+		$(this).toggle();
+		$(this).next().toggle();
+		change_input( $("#name") );
+		change_input( $("#gender") );
+		change_input( $("#phone") );
+		change_input( $("#email") );
+		change_input( $("#birdate") );
+		change_input( $("#military") );
+		change_input( $("#address") );
+	});
+	function change_input(d){
+		d.toggle();
+		d.next().val(d.text());
+		d.next().toggle();
+	};
+	$("#save").click(function(){
+		$(this).toggle();
+		$(this).prev().toggle();
+		save_v( $("#name_i") );
+		save_v( $("#gender_i") );
+		save_v( $("#phone_i") );
+		save_v( $("#email_i") );
+		save_v( $("#birdate_i") );
+		save_v( $("#military_i") );
+		save_v( $("#address_i") );
+	});
+	function save_v(d){
+		d.toggle();
+		d.prev().text(d.val());
+		d.prev().toggle();
+	};
+	$("#add_exp").click(function (){
+		$("#exp_form").toggle();
+	});
+	$("#add_exp_w").click(function (){
+		$("#exp_form_w").toggle();
+	});
+	$("#add_exp_p").click(function (){
+		$("#exp_form_p").toggle();
+	});
+	$("#add_skill").click(function (){
+		$("#skill_form").toggle();
+	});
+	function addRow(){
+		var tr = "<tr><td>"+ $('#s_name').val() + "</td><td>" + $('#d_name').val()+ "</td><td>" 
+				+ $('#g_year').val()+"</td></tr>";
+		$("#exp_table").append(tr);
+		$('#s_name').val("");
+		$('#d_name').val("");
+		$('#g_year').val("");
+	};
+	function addRow_w(){
+		var tr = "<tr><td>"+ $('#s_name_w').val() + "</td><td>" + $('#d_name_w').val()+ "</td><td>" 
+				+ $('#s_year').val()+" ~ " + $('#e_year').val()+"</td></tr>";
+		$("#exp_table_w").append(tr);
+		$('#s_name_w').val("");
+		$('#d_name_w').val("");
+		$('#s_year').val("");
+		$('#e_year').val("");
+	};
+	function addRow_p(){
+		var tr = "<tr><td><a href="+ $('#link_p').val()+ ">" + $('#s_name_p').val() + "</a></td><td>" + $('#d_year_p').val()+ "</td><td>" + $('#describe').val()+"</td></tr>";
+		$("#exp_table_p").append(tr);
+		$('#link_p').val("");
+		$('#s_name_p').val("");
+		$('#d_year_p').val("");
+		$('#describe').val("");
+	};
+
+	function addRow_skill(){
+		var tr = "<tr><td>"+ $('#skill_name').val() + "</td><td>0</td></tr>";
+		$("#skill_table").append(tr);
+		$('#skill_name').val("");
+	};
 </script>

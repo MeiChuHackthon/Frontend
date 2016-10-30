@@ -1,0 +1,228 @@
+<!-- index.html -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="customer.css">
+	<script type="customer.js" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<!--jQuery-->
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<!--font awsome-->
+	<!--<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">-->
+	 <style>
+	ul {
+	  list-style-type: none;
+	}
+	li {
+		font-size: 20px;
+	}
+body {
+  padding-top: 80px;
+}
+@media (max-width: 979px) {
+  body {
+    padding-top: 0px;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="./home.html" class="navbar-brand"><img src="./logo.png"></a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">My104<span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="My104">
+                <li><a href="#">Edit Profile</a></li>
+                <!-- <li class="divider"></li> -->
+              </ul>
+            </li>
+            <li>
+              <a href="#">家教</a>
+            </li>
+            <li>
+              <a href="#">外包</a>
+            </li>
+            <li>
+              <a href="#">獵才</a>
+            </li>
+            <li>
+              <a href="#">教育</a>
+            </li>
+            <li>
+              <a href="#">職涯社群</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">張晁銘<span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="Profile">
+                <li><a href="#">更改個人資料</a></li>
+                <li><a href="./logout" target="_blank">登出</a></li>
+                <!-- <li class="divider"></li> -->
+              </ul>
+            </li>
+            <!-- <li><a href="./logout" target="_blank">登出</a></li> -->
+          </ul>
+        </div>
+      </div>
+</div>
+	
+	    <!--left part-->
+<div class="container row">
+	<div class = "col-md-2">
+				  	<ul >
+				  	  <li class="active"><a href="home.html" style="font-size:20px;">首頁</a></li>
+				  	  <li><a href="./profile.html" style="font-size:20px;">Profile</a></li>
+				  	  <li><a href="resume.html" style="font-size:20px;">履歷</a></li>
+				  	  
+				  	</ul>
+	</div>
+
+				<!--Right Part-->
+	<div class="col-lg-9 jumbotron">
+		<div class="bs-docs-section">
+			<div style="font-size:30px">基本資料</div>
+			
+			    <ul class="list-group">
+			    	<div class="row">
+			        <li><div class="col-lg-2"><label>姓名:</label></div>
+			        	<div class="col-lg-10" id="name" style="display:block">Mark</div>
+			        </li>
+			        </div>
+
+			        <div class="row">
+			        <li><div class="col-lg-2"><label>性別:</label></div>
+			        	<div class="col-lg-10" id="gender" style="display:block">男</div>
+			        </li>
+			    	</div>
+
+					<div class="row">
+					<li><div class="col-lg-2"><label>電話:</label></div>
+						<div class="col-lg-10" id="phone" style="display:block">0800092000</div>
+					</li>
+					</div>
+
+					<div class="row">
+				    <li><div class="col-lg-2"><label>信箱:</label></div>
+				    	<div class="col-lg-10" id="email" style="display:block">Mark@gmail.com</div>
+				    </li>
+				    </div>
+				    <div class="row">
+				    <li><div class="col-lg-2"><label>生日:</label></div>
+				    	<div class="col-lg-10" id="birdate" style="display:block">1990/12/26</div>
+				    </li>
+				    </div>
+
+				    <div class="row">
+				    <li><div class="col-lg-2"><label>兵役:</label></div>
+				    	<div class="col-lg-10" id="military" style="display:block">役畢</div>
+				    </li>
+				    </div>
+
+				    <div class="row">
+				    <li><div class="col-lg-2"><label>地址:</label></div>
+				    	<div class="col-lg-10" id="address" style="display:block">新竹市東區大學路1001號</div>
+				    </li>
+				    </div>
+				</ul>
+			<div style="font-size:30px">學習經歷 </div>
+				 	<table id="exp_table" class="table">
+				 		<tr>
+				 			<th>校名</th>
+				 			<th>科系</th>
+				 			<th>畢業年分</th>
+				 		</tr>
+				 		<tr>
+				 			<td>交通大學</td>
+				 			<td>資訊工程學系</td>
+				 			<td>2012</td>
+				 		</tr>
+				 		<tr>
+				 			<td>交通大學</td>
+				 			<td>資訊科學與工程研究所</td>
+				 			<td>2014</td>
+				 		</tr>
+				 	</table>
+
+			<div style="font-size:30px">專業技能 </div>
+				 	<table id="skill_table" class="table">
+				 		<tr>
+				 			<th>名稱</th>
+				 			<th>他人認同</th>
+				 		</tr>
+				 		<tr>
+				 			<td>C++</td>
+				 			<td>
+				 				<span id="praised-1"> 5 </span>
+				 				人
+				 				<input class="btn btn-primary" type="button" value="praise" style="inline" id="praise-1">
+				 			</td>
+				 		</tr>
+				 		<tr>
+				 			<td>Python</td>
+				 			<td>
+				 				<span id="praised-2"> 5 </span>
+				 				人
+				 				<input class="btn btn-primary" type="button" value="praise" style="inline" id="praise-2">
+				 			</td>
+				 		</tr>
+				 	</table>
+
+			<div style="font-size:30px">工作經歷 </div>
+				 	<table id="exp_table_w" class="table">
+				 		<tr>
+				 			<th>公司名稱</th>
+				 			<th>職位</th>
+				 			<th>任職期間</th>
+				 		</tr>
+				 		<tr>
+				 			<td>104人力銀行</td>
+				 			<td>研究員</td>
+				 			<td>2014~</td>
+				 		</tr>
+				 	</table>
+			<div style="font-size:30px">專案經歷 </div>
+				 	<table id="exp_table_p" class="table">
+				 		<tr>
+				 			<th style="width: 33.3333%;">專案名稱</th>
+				 			<th style="width: 33.3333%;">完成日期</th>
+				 			<th style="height: auto; width: 33.3333%;">描述</th>
+				 		</tr>
+				 		<tr>
+				 			<td style="width: 33.3333%;"><a href="adad">Project1</a></td>
+				 			<td style="width: 33.3333%;">2010/1/1</td>
+				 			<td style="height: auto; width: 33.3333%;">Project1</td>
+				 		</tr>
+				 	</table>
+		</div>
+
+	</div>
+</div>
+
+</body>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="./bootstrap.min.js"></script>
+<script>
+	$("#praise-1").click(function(){
+			var a = parseInt( $("#praised-1").text() );
+			$("#praised-1").text(a+1);
+			$(this).attr("disabled",true);
+	});
+	$("#praise-2").click(function(){
+			var a = parseInt( $("#praised-2").text() );
+			$("#praised-2").text(a+1);
+			$(this).attr("disabled",true);
+	});
+</script>
