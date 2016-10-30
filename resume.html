@@ -149,7 +149,7 @@
                     <li>
                         <div class="resume-title row">
                             <h5 class="col-lg-11 col-xs-11">Engineer Resume</h5>
-                            <button type="button" class="showCont col-lg-1 col-xs-1" onclick="showContent()">+</button>
+                            <button type="button" class="showCont col-lg-1 col-xs-1" onclick="showContent($(this))">+</button>
                         </div>
                         <div id="item-resume1" class="item-resume">
                             <h6>Languages</h6>
@@ -397,13 +397,13 @@
                 $("#create_bt").toggle();
             }
             
-        function showContent(){
-            $(this).parent().next().toggle();
-            if( $(this).html() === "+"){
-                $(this).html("-");
+        function showContent(t){
+            t.parent().next().toggle();
+            if( t.html() === "+"){
+                t.html("-");
             }
             else {
-                $(this).html("+");
+                t.html("+");
             }
         }
             
