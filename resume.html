@@ -10,32 +10,11 @@
         li {
             list-style-type: none;
         }
-        ul {
-            padding-left: 0px;
+        @media (max-width: 979px) {
+          
         }
-        @media screen and (max-width: 767px) {
-            #profii {
-                display: none;
-                text-align: center;
-                border: 1px solid lightgrey;
-                padding: 10px;
-                box-shadow: 1px 1px 2px #888888;
-            }
-        }
-        #profii {
-            text-align: center;
-            border: 1px solid lightgrey;
-            padding: 10px;
-            box-shadow: 1px 1px 2px #888888;
-        }
-        .circlee {
-            margin: auto;
-            width: 200px;
-            height: 200px;
-            background: black;
-            -moz-border-radius: 100px;
-            -webkit-border-radius: 100px;
-            border-radius: 100px;
+        body {
+          padding-top: 80px;
         }
         #resume-list li h5 {
             display: inline-block;
@@ -65,7 +44,6 @@
             display: block;
         }
         .showCont {
-            background-color: white;
             border: none;
             font-size: 20px;
         }
@@ -129,27 +107,29 @@
     </div>
     
     <!-- CONTENT -->
-    <div class="container">
-      <div class="page-header" id="banner">
-        <div class="row">
-          <div class="col-lg-8 col-md-7 col-sm-6">
-            <h1>Resume</h1>
-            <p class="lead">Create your field-specific resume.</p>
-          </div>
-        </div>
+<div class="container row">
+      <div class = "col-md-2">
+            <ul>
+                <li class="active"><a href="home.html" style="font-size:20px;">首頁</a></li>
+                <li><a href="./profile.html" style="font-size:20px;">Profile</a></li>
+                <li><a href="resume.html" style="font-size:20px;">履歷</a></li>
+                  
+            </ul>
       </div>
-    </div>
+      <div class="col-lg-8 col-md-9 col-sm-6 jumbotron">
+        <h1>Resume</h1>
+        <p class="lead">Create your field-specific resume.</p>
     
-    <div class="container">
-        <div class="row">
-          <div class="col-lg-9 col-md-9 col-sm-8">
+    
+        
+
             <div>
                 <ul id="resume-list">
                     <!-- LIST ACTIVE RESUMES -->
                     <li>
                         <div class="resume-title row">
                             <h5 class="col-lg-11 col-xs-11">Engineer Resume</h5>
-                            <button type="button" class="showCont col-lg-1 col-xs-1" onclick="showContent($(this))">+</button>
+                            <button type="button" class="showCont col-lg-1 col-xs-1 btn-primary btn" onclick="showContent($(this))">+</button>
                         </div>
                         <div id="item-resume1" class="item-resume">
                             <h6>Languages</h6>
@@ -182,7 +162,7 @@
                     <li>
                         <div class="resume-title row">
                             <h5 class="col-lg-11 col-xs-11">Design Resume</h5>
-                            <button type="button" class="showCont col-lg-1 col-xs-1" onclick="showContent($(this))">+</button>
+                            <button type="button" class="showCont col-lg-1 col-xs-1 btn-primary btn" onclick="showContent($(this))">+</button>
                         </div>
                         <div id="item-resume2" class="item-resume">
                             <h6>Languages</h6>
@@ -219,7 +199,7 @@
                 <button id="create_bt" type="button">Create Resume</button>
             </div>
             
-            <div id="form-resume" class="well bs-component">
+            <div id="form-resume" class="bs-component">
               <form class="form-horizontal">
                 <fieldset>
                   <legend id="legend-resume">Create Resume</legend>
@@ -370,14 +350,9 @@
               </form>
             </div>
           </div>
-          <div id="profii" class="col-lg-3 col-md-3 col-sm-4">
-            <div class="circlee"></div>
-            <h4> Ed Warren </h4>
-            <p> Student at National Chiao Tung University </p>
-            <p> Hsinchu, Taiwan </p>
-          </div>
-        </div>
-    </div>
+          
+
+</div>
     
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="./bootstrap.min.js"></script>
@@ -420,7 +395,7 @@
             //$(node).addClass("showCont col-lg-1 col-xs-1");
             //text = document.createTextNode("+");
             //gnode.appendChild(text);
-            gnode = "<button type=\"button\" class=\"showCont col-lg-1 col-xs-1\" onclick=\"showContent($(this))\">+</button>";
+            gnode = "<button type=\"button\" class=\"showCont col-lg-1 col-xs-1 btn-primary btn\" onclick=\"showContent($(this))\">+</button>";
             $(node).append(gnode);
             $(node).addClass("resume-title row");
             para.appendChild(node);
