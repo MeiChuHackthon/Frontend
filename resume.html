@@ -334,7 +334,7 @@
                                 </div>
                                 <div class="checkbox col-lg-1">
                                     <label>
-                                    <input id="rec1" type="checkbox">
+                                    <input id="rec2" type="checkbox">
                                     </label>
                                 </div>
                             </li>
@@ -514,6 +514,20 @@
             
             para.appendChild(node);
             document.getElementById("resume-list").appendChild(para);
+
+            $("#resumeName").val("");
+            $("#inputLang").prop("checked", false);
+            $("#exp1").prop("checked", false);
+            $("#exp2").prop("checked", false);
+            $("#skill1").prop("checked", false);
+            $("#skill2").prop("checked", false);
+            $("#skill3").prop("checked", false);
+            $("#skill4").prop("checked", false);
+            $("#rec1").prop("checked", false);
+            $("#rec2").prop("checked", false);
+
+            $("#form-resume").toggle();
+            $("#create_bt").toggle();
             
         }
         
