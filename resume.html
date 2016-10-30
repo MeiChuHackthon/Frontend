@@ -40,6 +40,9 @@
         #resume-list li h5 {
             display: inline-block;
         }
+        #resume-list li {
+            display: block;
+        }
         .resume-title {
             border-bottom: 2px solid grey;
             margin-left: 2px;
@@ -51,6 +54,9 @@
         .item-resume li {
             display: inline-block;
         }
+        .item-resume ul li h5 {
+            font-size: 13px !important;
+        }
         .item-resume h6 {
             border-bottom: 2px solid orange;
             display: inline-block;
@@ -59,7 +65,9 @@
             display: block;
         }
         .showCont {
-        
+            background-color: white;
+            border: none;
+            font-size: 20px;
         }
         #form-resume {
             display: none;
@@ -141,7 +149,7 @@
                     <li>
                         <div class="resume-title row">
                             <h5 class="col-lg-11 col-xs-11">Engineer Resume</h5>
-                            <h5 class="showCont col-lg-1 col-xs-1">+</h5>
+                            <button type="button" class="showCont col-lg-1 col-xs-1" onclick="showContent()">+</button>
                         </div>
                         <div id="item-resume1" class="item-resume">
                             <h6>Languages</h6>
@@ -218,16 +226,16 @@
                   <div class="form-group">
                     <label for="resumeName" class="col-lg-2 control-label">Custom Name</label>
                     <div class="col-lg-10">
-                      <input type="text" class="form-control" id="resumeName" placeholder="Name">
+                      <input type="text" class="form-control" id="resumeName" placeholder="Name" required>
                     </div>
                   </div>
                   
                   <div class="form-group">
                         <label for="inputLang" class="col-lg-2 control-label">Languages</label>
                         <div class="col-lg-10">
-                            <ul id="lang-list">
+                            <ul>
                                 <!-- For each, append to lang-list -->
-                                <div class="col-lg-11">
+                                <div id="lang-list" class="col-lg-11">
                                 <li><h5>English</h5></li>
                                 <li><h5>Chinese</h5></li>
                                 </div>
@@ -238,7 +246,6 @@
                                 </div>
                             </ul>
                         </div>
-                        
                   </div>
                   
                   <div class="form-group">
@@ -355,7 +362,7 @@
                   <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
                       <button type="reset" class="btn btn-default" onclick="cancelForm()">Cancel</button>
-                      <button type="submit" class="btn btn-primary">Create Resume</button>
+                      <button type="button" class="btn btn-primary" onclick="createResume()">Create Resume</button>
                     </div>
                   </div>
                   
@@ -377,20 +384,11 @@
     
     <script>
         $(document).ready(function(){
-            $(".showCont").click(function(){
-                $(this).parent().next().toggle();
-                if( $(this).html() === "+"){
-                    $(this).html("-");
-                }
-                else {
-                    $(this).html("+");
-                }
-            });
-            
+
             $("#create_bt").click(function(){
-                $("#form-resume").toggle();
-                $("#create_bt").toggle();
-            });
+                    $("#form-resume").toggle();
+                    $("#create_bt").toggle();
+                });
             
         });
         
@@ -398,6 +396,147 @@
                 $("#form-resume").toggle();
                 $("#create_bt").toggle();
             }
+            
+        function showContent(){
+            $(this).parent().next().toggle();
+            if( $(this).html() === "+"){
+                $(this).html("-");
+            }
+            else {
+                $(this).html("+");
+            }
+        }
+            
+        function createResume(){
+            <!-- TITLE -->
+            var para = document.createElement("li");
+            var node = document.createElement("div");
+            var gnode = document.createElement("h5");
+            var text = document.createTextNode( $("#resumeName").val() );
+            gnode.appendChild(text);
+            $(gnode).addClass("col-lg-11 col-xs-11");
+            node.appendChild(gnode);
+            gnode = document.createElement("h5");
+            $(gnode).addClass("showCont col-lg-1 col-xs-1");
+            text = document.createTextNode("+");
+            gnode.appendChild(text);
+            node.appendChild(gnode);
+            $(node).addClass("resume-title row");
+            para.appendChild(node);
+            
+            
+            node = document.createElement("div");
+            $(node).addClass("item-resume");
+            
+            
+            <!-- console.log( $("#inputLang").val() ); -->
+            if( $("#inputLang").prop("checked") ){
+                <!-- languages -->
+                gnode = document.createElement("h6");
+                text = document.createTextNode("Languages");
+                gnode.appendChild(text);
+                node.appendChild(gnode);
+                var x = document.getElementById("lang-list");
+                gnode = document.createElement("ul");
+                $(gnode).html($(x).html());
+                node.appendChild(gnode);
+            }
+
+            x = document.getElementById("exp-list");
+            
+            if( $(x) ){
+                gnode = document.createElement("h6");
+                text = document.createTextNode("Experiences");
+                gnode.appendChild(text);
+                node.appendChild(gnode);
+                gnode = document.createElement("ul");
+                
+                console.log(x);
+                x = $(x).children();
+                console.log( x.length ); 
+                
+                console.log(x[0]);
+                console.log(x[1]);
+
+                var i;
+                var y;
+                for(i = 0; i < x.length; i++){
+                    console.log($(x[i]).find("input[type='checkbox']").prop("checked"));
+                    if( $(x[i]).find("input[type='checkbox']").prop("checked") ){
+                        ggnode = document.createElement("li");
+                        y = $(x[i]).children();
+                        $(ggnode).html( $(y[0]).html() );
+                        gnode.appendChild(ggnode);
+                    }
+                }
+                node.appendChild(gnode);
+                
+            }
+            
+            x = document.getElementById("skills-list");
+            
+            if( $(x) ) {
+                gnode = document.createElement("h6");
+                text = document.createTextNode("Skills");
+                gnode.appendChild(text);
+                node.appendChild(gnode);
+                gnode = document.createElement("ul");
+                
+                console.log(x);
+                x = $(x).children();
+                console.log( x.length ); 
+                
+                console.log(x[0]);
+                console.log(x[1]);
+
+                var i;
+                var y;
+                for(i = 0; i < x.length; i++){
+                    console.log($(x[i]).find("input[type='checkbox']").prop("checked"));
+                    if( $(x[i]).find("input[type='checkbox']").prop("checked") ){
+                        ggnode = document.createElement("li");
+                        y = $(x[i]).children();
+                        $(ggnode).html( $(y[0]).html() );
+                        gnode.appendChild(ggnode);
+                    }
+                }
+                node.appendChild(gnode);
+            }
+            
+            x = document.getElementById("rec-list");
+            
+            if( $(x) ) {
+                gnode = document.createElement("h6");
+                text = document.createTextNode("Recommendations");
+                gnode.appendChild(text);
+                node.appendChild(gnode);
+                gnode = document.createElement("ul");
+                
+                console.log(x);
+                x = $(x).children();
+                console.log( x.length ); 
+                
+                console.log(x[0]);
+                console.log(x[1]);
+
+                var i;
+                var y;
+                for(i = 0; i < x.length; i++){
+                    console.log($(x[i]).find("input[type='checkbox']").prop("checked"));
+                    if( $(x[i]).find("input[type='checkbox']").prop("checked") ){
+                        ggnode = document.createElement("li");
+                        y = $(x[i]).children();
+                        $(ggnode).html( $(y[0]).html() );
+                        gnode.appendChild(ggnode);
+                    }
+                }
+                node.appendChild(gnode);
+            }
+            
+            para.appendChild(node);
+            document.getElementById("resume-list").appendChild(para);
+            
+        }
         
     </script>
 </body>
