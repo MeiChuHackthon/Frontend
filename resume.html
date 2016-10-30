@@ -182,7 +182,7 @@
                     <li>
                         <div class="resume-title row">
                             <h5 class="col-lg-11 col-xs-11">Design Resume</h5>
-                            <h5 class="showCont col-lg-1 col-xs-1">+</h5>
+                            <button type="button" class="showCont col-lg-1 col-xs-1" onclick="showContent($(this))">+</button>
                         </div>
                         <div id="item-resume2" class="item-resume">
                             <h6>Languages</h6>
@@ -416,11 +416,12 @@
             gnode.appendChild(text);
             $(gnode).addClass("col-lg-11 col-xs-11");
             node.appendChild(gnode);
-            gnode = document.createElement("h5");
-            $(gnode).addClass("showCont col-lg-1 col-xs-1");
-            text = document.createTextNode("+");
-            gnode.appendChild(text);
-            node.appendChild(gnode);
+            //gnode = document.createElement("h5");
+            //$(node).addClass("showCont col-lg-1 col-xs-1");
+            //text = document.createTextNode("+");
+            //gnode.appendChild(text);
+            gnode = "<button type=\"button\" class=\"showCont col-lg-1 col-xs-1\" onclick=\"showContent($(this))\">+</button>";
+            $(node).append(gnode);
             $(node).addClass("resume-title row");
             para.appendChild(node);
             
